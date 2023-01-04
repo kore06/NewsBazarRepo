@@ -63,7 +63,7 @@ export class News extends Component {
 */
   async componentDidMount() {
     this.props.setProgress(10);
-    let urll = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.state.pageSize}`;
+    let urll = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=5de37454e75c4fdf97e93d947b27c1e1&page=${this.state.page}&pageSize=${this.state.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(urll);
     this.props.setProgress(30);
@@ -78,7 +78,7 @@ export class News extends Component {
   }
   fetchMoreData = async () => {
     this.setState({page: this.state.page + 1})
-    let urll = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page+1}&pageSize=${this.state.pageSize}`;
+    let urll = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=5de37454e75c4fdf97e93d947b27c1e1&page=${this.state.page+1}&pageSize=${this.state.pageSize}`;
     let data = await fetch(urll);
     let parsedData = await data.json();
     this.setState({ articles: this.state.articles.concat(parsedData.articles),
