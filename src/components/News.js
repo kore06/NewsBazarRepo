@@ -90,7 +90,7 @@ export class News extends Component {
     return (
       <>
         <h2
-          style={{ textAlign: "center", marginTop: 20, fontFamily: "cursive" }}
+          style={{ textAlign: "center", marginTop: 60, fontFamily: "cursive" }}
         >
           <b>NewsBazar - Top Headlines</b>
         </h2>
